@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            background-color: #FFF0D1;
+            color: #333;
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(wall1.jpg);
+         background-size: 150px;
+            background-blend-mode: multiply;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-top: 100px;
+            color: #795757;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .header {
+            background-color: #795757;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .header a:hover {
+            color: #FFF0D1;
+        }
+
+        .image-slider {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 150px;
+            position: relative;
+        }
+
+        .image-slider .images {
+            display: flex;
+            animation: slide 30s infinite linear;
+        }
+
+        .image-slider img {
+            width: 300px;
+            height: 300px;
+            margin-right: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-slider img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .audio-player {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .audio-player audio {
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+        }
+
+        .info-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .info-box {
+            background-color: #795757;
+            color: white;
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: scale(0);
+            animation: showInfoBox 1s forwards;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        @keyframes showInfoBox {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .info-box:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .info-box:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .info-box:nth-child(3) {
+            animation-delay: 1.5s;
+        }
+
+        .info-box:nth-child(4) {
+            animation-delay: 2s;
+        }
+
+        .info-box:nth-child(5) {
+            animation-delay: 2.5s;
+        }
+
+        .info-box:nth-child(6) {
+            animation-delay: 3s;
+        }
+.info-box:nth-child(7) {
+            animation-delay: 3.5s;
+        }
+
+   .btn-show-info {
+            display: block;
+            width: 220px;
+            margin: 50px auto;
+            background-color: #795757;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 30px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn-show-info:hover {
+            background-color: #6d4b4b;
+            transform: translateY(-5px);
+        }
+
+        .info-box:hover {
+            background-color: #6d4b4b;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .info-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-box {
+                width: 80%;
+                max-width: 300px;
+                margin: 10px 0;
+            }
+
+            .image-slider img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="ass1.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="educat.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="friends.html">Friends</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+
+    <h1>About Me</h1>
+
+    <div class="image-slider">
+        <div class="images">
+            <img src="image_1.jpg" alt="Image 1">
+            <img src="image_2.jpg" alt="Image 2">
+            <img src="image_3.jpg" alt="Image 3">
+            <img src="image_4.jpg" alt="Image 4">
+            <img src="image_5.jpg" alt="Image 5">
+            <img src="image_6.jpg" alt="Image 6">
+            <img src="image_7.jpg" alt="Image 7">
+            <img src="image_8.jpg" alt="Image 8">
+            <img src="image_9.jpg" alt="Image 9">
+            <img src="image_10.jpg" alt="Image 10">
+            <img src="images_11.jpg" alt="Image 11">
+        </div>
+    </div>
+
+    <div class="audio-player">
+        <audio controls autoplay>
+            <source src="music_1.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+    </div>
+
+    <div class="info-boxes" id="info-boxes">
+        <div class="info-box">
+            <h3>Name</h3>
+            <p>Ainur Jannah Iman binti Azaha</p>
+        </div>
+        <div class="info-box">
+            <h3>Nickname</h3>
+            <p>Ren/Nina</p>
+        </div>
+        <div class="info-box">
+            <h3>Age</h3>
+            <p>20</p>
+        </div>
+        <div class="info-box">
+            <h3>Birthday</h3>
+            <p>October 27, 2004</p>
+        </div>
+        <div class="info-box">
+            <h3>Address</h3>
+            <p>Dungun, Terengganu</p>
+        </div>
+        <div class="info-box">
+            <h3>Hobbies</h3>
+            <p>Watching movies, Painting</p>
+        </div>
+        <div class="info-box">
+            <h3>Interests</h3>
+            <p>Art, Music, Superbike</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+   

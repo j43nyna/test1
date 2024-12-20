@@ -1,0 +1,237 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+      
+        body {
+            font-family: Times New Roman, serif;
+            margin: 0;
+            padding: 0;
+	    background-image: url(wall1.jpg);
+    	    background-size: 150px;
+            background-blend-mode: multiply;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 50px;
+            color:  #795757;
+        }
+
+        .header {
+            background-color: #795757;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .header a:hover {
+            color: #FFF0D1;
+        }
+
+        .gallery-section {
+            padding: 40px 10px;
+            background-color:#FFF0D1;
+	    background-image: url(wall1.jpg);
+    	    background-size: 150px;
+            background-blend-mode: multiply;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+       
+        .gallery-box {
+            background-color: #664343;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+            background-color: #664343;
+            margin: 0 auto;
+        }
+
+        .gallery-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        
+        .gallery-subheading {
+            font-size: 22px;
+            margin-top: 20px;
+            color: #555;
+            font-style: italic;
+            max-width: 600px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        
+        .gallery-images {
+            display: flex;
+            overflow: hidden;
+            gap: 15px;
+            animation: slide 27s linear infinite;
+            margin-top: 25px;
+        }
+
+        .gallery-images img {
+            width: auto;  
+            height: 190px;  
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+   
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        
+     
+        .audio-player {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        audio {
+            width: 60%; 
+            border-radius: 10px;
+            background-color: #333;
+            padding: 5px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="ass1.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="educat.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="friends.html">Friends</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+
+  
+    <section class="gallery-section">
+        <h1>Gallery</h1>
+
+        <div class="gallery-container">
+
+            <div class="gallery-box">
+                <h2>Azaha's Family</h2>
+            </div>
+            <div class="gallery-subheading">
+                Family. Where life begins and love never ends. I really hope they know how much I love them. Love you.
+            </div>
+            <div class="gallery-images">
+                <img src="fam1.jpg" alt="Family Image 1">
+                <img src="fam2.jpg" alt="Family Image 2">
+                <img src="fam3.jpg" alt="Family Image 3">
+                <img src="fam4.jpg" alt="Family Image 4">
+                <img src="fam5.jpg" alt="Family Image 5">
+                <img src="fam6.jpg" alt="Family Image 6">
+            </div>
+
+      
+            <div class="gallery-box">
+                <h2>Nephew and Niece</h2>
+            </div>
+            <div class="gallery-subheading">
+                Some day you will be old enough to start reading fairy tales again. Cuman always love y'all.
+            </div>
+            <div class="gallery-images">
+                <img src="new1.jpg" alt="Nephew and Niece Image 1">
+                <img src="new2.jpg" alt="Nephew and Niece Image 2">
+                <img src="new3.jpg" alt="Nephew and Niece Image 3">
+                <img src="new4.jpg" alt="Nephew and Niece Image 4">
+                <img src="new5.jpg" alt="Nephew and Niece Image 5">
+                <img src="new6.jpg" alt="Nephew and Niece Image 6">
+                <img src="new7.jpg" alt="Nephew and Niece Image 7">
+                <img src="new8.jpg" alt="Nephew and Niece Image 8">
+                <img src="new9.jpg" alt="Nephew and Niece Image 9">
+                <img src="new10.jpg" alt="Nephew and Niece Image 10">
+            </div>
+
+           
+            <div class="gallery-box">
+                <h2>Nature and Me</h2>
+            </div>
+            <div class="gallery-subheading">
+                Only nature see another side of ren.
+            </div>
+            <div class="gallery-images">
+                <img src="nat1.jpg" alt="Nature Image 1">
+                <img src="nat2.jpg" alt="Nature Image 2">
+                <img src="nat3.jpg" alt="Nature Image 3">
+                <img src="nat4.jpg" alt="Nature Image 4">
+                <img src="nat5.jpg" alt="Nature Image 5">
+                <img src="nat6.jpg" alt="Nature Image 6">
+                <img src="nat7.jpg" alt="Nature Image 7">
+                <img src="nat8.jpg" alt="Nature Image 8">
+                <img src="nat9.jpg" alt="Nature Image 9">
+               
+            </div>
+
+        </div>
+        
+     
+        <div class="audio-player">
+            <audio controls>
+                <source src="music_2.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+    </section>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

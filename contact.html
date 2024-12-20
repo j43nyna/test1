@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            background-color: #FFF0D1;
+            color: #333;
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(wall1.jpg);
+            background-size: 150px;
+            background-blend-mode: multiply;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 50px;
+            color: #795757;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .header {
+            background-color: #795757;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .header a:hover {
+            color: #FFF0D1;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .contact-box {
+            background-color: #795757;
+            color: white;
+            width: 100%;
+            max-width: 600px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-box h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #FFF0D1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #795757;
+            border-radius: 10px;
+            background-color: #FFF;
+            color: #333;
+            font-size: 16px;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #FFF0D1;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .submit-btn {
+            background-color: #FFF0D1;
+            color: #795757;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #795757;
+            color: white;
+        }
+
+        /* Footer Styling */
+        .footer {
+            font-size: 16px;
+            padding-top: 20px;
+            text-align: center;
+            background-color: #795757;
+            color: white;
+            padding: 15px 0;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 30px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #FFF0D1;
+            transform: scale(1.2);
+        }
+
+        /* Rating Form Styling */
+        .rating-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .rating-container select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid #795757;
+        }
+
+        .rating-message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .contact-box {
+                width: 80%;
+                padding: 20px;
+            }
+
+            .submit-btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="ass1.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="educat.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="friends.html">Friends</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+
+    <h1>Contact Me</h1>
+
+    <div class="contact-container">
+        <div class="contact-box">
+            <h2>Get in Touch</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+  
+    <div class="rating-container">
+        <h2>Rate My Website</h2>
+        <select id="rating">
+            <option value="0">Rate me</option>
+            <option value="20">0-20%</option>
+            <option value="50">21-50%</option>
+            <option value="80">51-80%</option>
+            <option value="100">81-100%</option>
+        </select>
+        <div id="rating-message" class="rating-message"></div>
+    </div>
+
+     <div class="footer">
+        <p>© 2024 by Ainur Jannah Iman | All Rights Reserved</p>
+        <div class="social-icons">
+       
+            <a href="https://www.instagram.com/nyninaaa/profilecard/?igsh=MTU4aXlhZDEyNzhzdg==" target="_blank"><i class="instagram"></i></a>
+            
+            <a href="http://www.wasap.my/60179177884" target="_blank"><i class="whatsapp"></i></a>
+           
+            <a href="https://www.tiktok.com/@s.qrcjae?_t=ZS-8sL1uKqy1Vi&_r=1" target="_blank"><i class="tiktok"></i></a>      
+
+    </div>
+
+    <script>
+        
+        document.getElementById('rating').addEventListener('change', function() {
+            const rating = parseInt(this.value);
+            const messageElement = document.getElementById('rating-message');
+
+            if (rating <= 20) {
+                messageElement.innerHTML = "Oh no! I got bad rating 😞. Please send message what I need to be improve";
+            } else if (rating <= 50) {
+                messageElement.innerHTML = "Yeay! I got good rating. Thank you!";
+            } else if (rating <= 80) {
+                messageElement.innerHTML = "Awesome! Thank you for your feedback ❤️";
+            } else {
+                messageElement.innerHTML = "Fantastic babe! Thank you for your feedback! Here are the cookies for you 🍪";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
+

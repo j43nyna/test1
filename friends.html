@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends</title>
+    <style>
+        body {
+            background-color: #FFF0D1;
+            color: #333;
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+	    background-image: url(wall1.jpg);
+    	    background-size: 150px;
+            background-blend-mode: multiply;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 50px;
+            color: #795757;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .header {
+            background-color: #795757;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .header a:hover {
+            color: #FFF0D1;
+        }
+
+        .audio-player {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+       .audio-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+
+        }
+
+        .small-box {
+            background-color: #795757;
+            color: white;
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 50px auto;
+            font-size: 24px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .subheading {
+            text-align: center;
+            font-size: 22px;
+            color: #795757;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .image-gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .info-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .info-box {
+            background-color: #795757;
+            color: white;
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            opacity: 0;
+            transform: scale(0);
+            animation: showInfoBox 1s forwards;
+        }
+
+        @keyframes showInfoBox {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .info-box:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .info-box:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .info-box:nth-child(3) {
+            animation-delay: 1.5s;
+        }
+
+        .info-box:nth-child(4) {
+            animation-delay: 2s;
+        }
+
+        .info-box:nth-child(5) {
+            animation-delay: 2.5s;
+        }
+
+        .info-box:nth-child(6) {
+            animation-delay: 3s;
+        }
+
+        .info-box:nth-child(7) {
+            animation-delay: 3.5s;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }.info-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-box {
+                width: 80%;
+                max-width: 300px;
+                margin: 10px 0;
+            }
+
+            .image-gallery img {
+                width: 180px;
+                height: 180px;
+            }
+
+            .video-container {
+                max-width: 100%;
+                margin: 50px auto;
+            }
+
+            .video-container h2 {
+                font-size: 24px;
+            }
+        }
+
+        .video-container {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 800px;
+        }
+
+        .video-container h2 {
+            font-size: 28px;
+            color: #4a3a3a;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="ass1.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="educat.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="friends.html">Friends</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+
+    <h1>Friends</h1>
+
+
+    <div class="small-box">
+        Highschool Friends
+    </div>
+    <div class="subheading">
+        Forever young, forever nostalgic
+    </div>
+
+   <div class="audio-player">
+    <audio controls autoplay>
+        <source src="music_3.mp3" type="audio/mpeg">
+        Browser anda tidak menyokong audio.
+    </audio>
+</div>
+
+    <div class="image-gallery">
+        <img src="high1.jpg" alt="Highschool Friend 1">
+        <img src="high2.jpg" alt="Highschool Friend 2">
+        <img src="high3.jpg" alt="Highschool Friend 3">
+        <img src="high4.jpg" alt="Highschool Friend 4">
+        <img src="high5.jpg" alt="Highschool Friend 5">
+        <img src="high6.jpg" alt="Highschool Friend 6">
+        <img src="high7.jpg" alt="Highschool Friend 7">
+        <img src="high8.jpg" alt="Highschool Friend 8">
+        <img src="high9.jpg" alt="Highschool Friend 9">
+        <img src="high10.jpg" alt="Highschool Friend 10">
+        <img src="high11.jpg" alt="Highschool Friend 11">
+    </div>
+
+    <div class="small-box">
+        Universities Friends
+    </div>
+    <div class="subheading">
+        No distance can break the bond we built during our college days.
+    </div>
+    <div class="image-gallery">
+        <img src="uni1.jpg" alt="University Friend 1">
+        <img src="uni2.jpg" alt="University Friend 2">
+        <img src="uni3.jpg" alt="University Friend 3">
+        <img src="uni4.jpg" alt="University Friend 4">
+        <img src="uni5.jpg" alt="University Friend 5">
+        <img src="uni6.jpg" alt="University Friend 6">
+        <img src="uni7.jpg" alt="University Friend 7">
+        <img src="uni8.jpg" alt="University Friend 8">
+        <img src="uni9.jpg" alt="University Friend 9">
+        <img src="uni10.jpg" alt="University Friend 10">
+        <img src="uni11.jpg" alt="University Friend 11">
+    </div>
+
+    <div class="small-box">
+        Internship Friends
+    </div>
+    <div class="subheading">
+        Friendship is the hardest thing in the world to explain. It’s not something you learn in school. But if you haven’t learned the meaning of friendship, you really haven’t learned anything.
+    </div>
+    <div class="image-gallery">
+        <img src="int1.jpg" alt="Internship Friend 1">
+        <img src="int2.jpg" alt="Internship Friend 2">
+        <img src="int3.jpg" alt="Internship Friend 3">
+        <img src="int4.jpg" alt="Internship Friend 4">
+        <img src="int5.jpg" alt="Internship Friend 5">
+        <img src="int6.jpg" alt="Internship Friend 6">
+        <img src="int7.jpg" alt="Internship Friend 7">
+        <img src="int8.jpg" alt="Internship Friend 8">
+        <img src="int9.jpg" alt="Internship Friend 9">
+        <img src="int10.jpg" alt="Internship Friend 10">
+    </div>
+<div class="video-container">
+        <h2>Internship Memories</h2>
+        <video controls>
+            <source src="intern_1.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+</body>
+
+</html>
+
+
